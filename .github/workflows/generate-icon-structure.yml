@@ -1,0 +1,27 @@
+name: Generate Icon Structure
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  generate-icon-structure:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PowerShell
+        run: |
+          curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+          sudo apt-add-repository https://packages.microsoft.com/ubuntu/$(lsb_release -rs)/prod
+          sudo apt-get update
+          sudo apt-get install -y powershell
+
+      - name: Run PowerShell script
+        run: pwsh ./scripts/generate-icon-structure.ps1
