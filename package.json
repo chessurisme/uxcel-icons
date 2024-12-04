@@ -18,6 +18,8 @@
   "license": "MIT",
   "devDependencies": {
     "prettier": "3.4.1",
-    "rollup": "^4.28.0"
+    "rollup": "^4.28.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "rollup-plugin-copy": "^3.5.0"
   }
 }
