@@ -17,6 +17,7 @@
   "author": "Chessurisme",
   "license": "MIT",
   "devDependencies": {
+    "prettier": "3.4.1",
     "rollup": "^4.28.0"
   }
 }
